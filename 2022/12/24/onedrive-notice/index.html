@@ -25,23 +25,34 @@
     <!-- meta -->
 
 
-<title>归档：2024 | Z&#39;s Site</title>
+<title>搭建onedrive公共云盘 | Z&#39;s Site</title>
 
+
+    <meta name="keywords" content="技术, 云盘">
 
 
 
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="日记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Z&#39;s Site">
-<meta property="og:url" content="http://c6erbug.gihub.io/c6erbug/archives/2024/index.html">
+    <meta name="description" content="过程简记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建onedrive公共云盘">
+<meta property="og:url" content="http://c6erbug.gihub.io/c6erbug/2022/12/24/onedrive-notice/index.html">
 <meta property="og:site_name" content="Z&#39;s Site">
-<meta property="og:description" content="日记">
+<meta property="og:description" content="过程简记">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bu.dusays.com/2024/01/19/65aa415d56da9.png">
+<meta property="og:image" content="https://bu.dusays.com/2024/01/19/65aa415d4cfc7.png">
+<meta property="og:image" content="https://bu.dusays.com/2024/01/19/65aa415d57031.png">
+<meta property="og:image" content="https://bu.dusays.com/2024/01/19/65aa415d4cfbe.png">
+<meta property="article:published_time" content="2022-12-24T12:48:52.000Z">
+<meta property="article:modified_time" content="2024-02-22T15:04:40.000Z">
 <meta property="article:author" content="Z">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="云盘">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bu.dusays.com/2024/01/19/65aa415d56da9.png">
 
 
     
@@ -117,76 +128,96 @@
 </header>
 
 
-    <div class="cover">
-        <div class="cover__logo">
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        搭建onedrive公共云盘
+    </h1>
+    <div class="post-title__meta">
+        <a href="/c6erbug/archives/2022/12/" class="post-meta__date button">2022-12-24</a>
+        
+    <span class="separate-dot"></span><a href="/c6erbug/categories/%E6%8A%80%E6%9C%AF/" class="button">技术</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol>
+        </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc" tabindex="0">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">文章目录</div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol>
+    </div>
+
+
+<article class="post post__with-toc content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <hr>
+<p><em><strong>本文具有强时效性，文章中内容可能已经失效，请注意斟酌</strong></em></p>
+<hr>
+<p>域名: <del>onedrive.knyxz.xyz</del>（已失效）<br>在冲浪的时候发现浅笑安然的<a target="_blank" rel="noopener" href="https://sianx.com/">博客</a><br><br><img src="https://bu.dusays.com/2024/01/19/65aa415d56da9.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa415d56da9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="浅笑安然のonedrive云盘"><br>其博客中工具菜单中的的我的云盘，能直接访问onedrive云盘并且下载文件</p>
+<p>只需在onedrive存储空间中指定一个公共文件夹</p>
+<p>再用<a target="_blank" rel="noopener" href="https://github.com/spencerwooo/onedrive-vercel-index">Onedrive-vercel-index</a>Fork一下，根据官方文档用vercel进行部署就完成了<br><img src="https://bu.dusays.com/2024/01/19/65aa415d4cfc7.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa415d4cfc7.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="github project"></p>
+<p>ps：vercel这个网站还蛮良心的，hexo加速和域名解析都是在这个上面搞的，真不戳：）</p>
+<p><img src="https://bu.dusays.com/2024/01/19/65aa415d57031.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa415d57031.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="vercel"><br>最后放个成果图↓</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://bu.dusays.com/2024/01/19/65aa415d4cfbe.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa415d4cfbe.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="建好的公共云盘"></h2><hr>
+<p>由于网盘使用的数据库为upstash，不活跃的数据库将会被自动清除</p>
+<p>周期性手动部署过于麻烦，故已停止使用<br>R.I.P</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>更新于 2024-02-22</p></div> 
+    <div class="post-entry__tags"><a href="/c6erbug/tags/%E6%8A%80%E6%9C%AF/" class="post-tags__link button"># 技术</a><a href="/c6erbug/tags/%E4%BA%91%E7%9B%98/" class="post-tags__link button"># 云盘</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
             
-                <h1>Z&#39;s Site</h1>
+                <a href="/c6erbug/2023/05/08/Youtube-bilibili/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            上一篇
+                        </div>
+                        <div class="nav__title">
+                            翻译打轴制作全流程
+                        </div>
+                    </div>
+                </a>
             
         </div>
-        
-        
-            <div class="cover__intro">
-                <p>FOREVER LOVE · FOREVER TECH</p>
- 
-            </div>
-        
+        <div class="nav__next">
+            
+        </div>
     </div>
 
-            
-<main class='main'>
-    
-		
-    <div class="post-list">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        2023年度总结
-    </h2>
-    
-        一些书籍和娱乐
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/c6erbug/archives/2024/02/" class="post-meta__date button">2024-02-25</a>
-    
-    <span class="separate-dot"></span><a href="/c6erbug/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="button">年终总结</a>
-
- 
-</div>
-<div class="post-entry__tags"><a href="/c6erbug/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="post-tags__link button"># 年终总结</a></div> 
-<a href="/c6erbug/2024/02/25/best-2023/" class="post-entry__link">2023年度总结</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Ride-Rec
-    </h2>
-    
-        骑行存档
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/c6erbug/archives/2024/02/" class="post-meta__date button">2024-02-17</a>
-    
-    <span class="separate-dot"></span><a href="/c6erbug/categories/%E9%AA%91%E8%A1%8C/" class="button">骑行</a>
-
- 
-</div>
-<div class="post-entry__tags"><a href="/c6erbug/tags/%E9%AA%91%E8%A1%8C/" class="post-tags__link button"># 骑行</a><a href="/c6erbug/tags/%E5%AD%98%E6%A1%A3/" class="post-tags__link button"># 存档</a></div> 
-<a href="/c6erbug/2024/02/17/ride-rec/" class="post-entry__link">Ride-Rec</a>
-                </div>
-            
-        
-    </div>
-    
 
 
-	
+
+
 </main>
 
             <footer class="footer">
