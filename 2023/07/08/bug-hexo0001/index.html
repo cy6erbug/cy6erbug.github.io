@@ -35,7 +35,7 @@
     <!-- meta -->
 
 
-<title>关于hexo部署 &#34;Please make sure you have the correct access rights&#34; 报错及解决 | Z&#39;s Site</title>
+<title>关于hexo部署 &#34;Please make sure you have the correct access rights&#34; 报错及解决 | Z&#39;s Root</title>
 
 
     <meta name="keywords" content="技术, bug, hexo">
@@ -49,7 +49,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于hexo部署 &quot;Please make sure you have the correct access rights&quot; 报错及解决">
 <meta property="og:url" content="https://c6erbug.gihub.io/2023/07/08/bug-hexo0001/index.html">
-<meta property="og:site_name" content="Z&#39;s Site">
+<meta property="og:site_name" content="Z&#39;s Root">
 <meta property="og:description" content="hexo常规报错非常规解决方法">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bu.dusays.com/2024/01/19/65aa4001c6d60.png">
@@ -179,12 +179,12 @@
 <article class="post post__with-toc content-card">
     <div class="post__header"></div>
     <div class="post__content">
-        <p>成功部署hexo一段时间后突然出现本地无法连接github托管的情况<!--more--><br><img src="https://bu.dusays.com/2024/01/19/65aa4001c6d60.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001c6d60.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="git报错"></p>
+        <p>成功部署hexo一段时间后突然出现本地无法连接github托管的情况<!--more--><br><img src="https://bu.dusays.com/2024/01/19/65aa4001c6d60.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001c6d60.png" srcset="https://bu.dusays.com/2024/07/26/66a3328b79b0d.gif" alt="git报错"></p>
 <h1 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h1><p>看了下不是.ssh的问题，与github设置的ssh公钥链接无关<br>可能最近换了一个梯子，dns被污染了<br>所以先清除了dns缓存<br>在cmd中:<code>ipconfig /flushdns</code><br>仍然无效</p>
 <h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>最后通过Google如何修改hosts文件，自定义GitHub的域名映射后，解决问题<br><strong>修改方法如下：</strong></p>
-<h2 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h2><p>打开<code>C:\Windows\System32\drivers\etc</code><br><img src="https://bu.dusays.com/2024/01/19/65aa4001cbff5.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001cbff5.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="hosts"></p>
-<h3 id="获取管理员权限"><a href="#获取管理员权限" class="headerlink" title="获取管理员权限"></a>获取管理员权限</h3><p>右键hosts文件→属性→安全<br>点击编辑→选中Users→完全控制→应用<br><img src="https://bu.dusays.com/2024/01/19/65aa4001c6d5f.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001c6d5f.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg=="><br>再打开hosts文件（notepad)</p>
-<h3 id="查询ip地址"><a href="#查询ip地址" class="headerlink" title="查询ip地址"></a>查询ip地址</h3><p>用 <a target="_blank" rel="noopener" href="https://www.ipaddress.com/">ipaddress.com</a>查询Github的ip地址<br>或直接使用<code>140.82.113.4 github.com</code><br>再将<code>140.82.113.4 github.com</code>粘贴到文档的下方即可<br><img src="https://bu.dusays.com/2024/01/19/65aa4001e3326.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001e3326.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg=="><br>别忘了保存~</p>
+<h2 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h2><p>打开<code>C:\Windows\System32\drivers\etc</code><br><img src="https://bu.dusays.com/2024/01/19/65aa4001cbff5.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001cbff5.png" srcset="https://bu.dusays.com/2024/07/26/66a3328b79b0d.gif" alt="hosts"></p>
+<h3 id="获取管理员权限"><a href="#获取管理员权限" class="headerlink" title="获取管理员权限"></a>获取管理员权限</h3><p>右键hosts文件→属性→安全<br>点击编辑→选中Users→完全控制→应用<br><img src="https://bu.dusays.com/2024/01/19/65aa4001c6d5f.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001c6d5f.png" srcset="https://bu.dusays.com/2024/07/26/66a3328b79b0d.gif"><br>再打开hosts文件（notepad)</p>
+<h3 id="查询ip地址"><a href="#查询ip地址" class="headerlink" title="查询ip地址"></a>查询ip地址</h3><p>用 <a target="_blank" rel="noopener" href="https://www.ipaddress.com/">ipaddress.com</a>查询Github的ip地址<br>或直接使用<code>140.82.113.4 github.com</code><br>再将<code>140.82.113.4 github.com</code>粘贴到文档的下方即可<br><img src="https://bu.dusays.com/2024/01/19/65aa4001e3326.png" class="lazy" data-srcset="https://bu.dusays.com/2024/01/19/65aa4001e3326.png" srcset="https://bu.dusays.com/2024/07/26/66a3328b79b0d.gif"><br>别忘了保存~</p>
 <h2 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h2><p>回到Git Bash<br><code>hexo clean&amp;hexo g&amp;hexo d</code></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>由于梯子和代理软件的原因导致DNS污染，20端口被屏蔽，需要手动配置github的ip地址进行连接</p>
 
@@ -257,7 +257,7 @@
     
         
         <p class="footer-copyright">
-            Copyright © 2024 <a href="/">Z&#39;s Site</a>
+            Copyright © 2022&nbsp;-&nbsp;2024 <a href="/">Z&#39;s Root</a>
         </p>
     
     
