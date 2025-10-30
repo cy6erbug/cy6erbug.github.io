@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于hexo部署 &quot;Please make sure you have the correct access rights&quot; 报错及解决</title>
+      <link href="/2023/07/08/bug-hexo0001/"/>
+      <url>/2023/07/08/bug-hexo0001/</url>
+      
+        <content type="html"><![CDATA[<p>成功部署hexo一段时间后突然出现本地无法连接github托管的情况<span id="more"></span><br><img src="/images/bug-hexo0001/1.png" alt="git报错"></p><h1 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h1><p>看了下不是.ssh的问题，与github设置的ssh公钥链接无关<br>可能最近换了一个梯子，dns被污染了<br>所以先清除了dns缓存<br>在cmd中:<code>ipconfig /flushdns</code><br>仍然无效</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>最后通过Google如何修改hosts文件，自定义GitHub的域名映射后，解决问题<br><strong>修改方法如下：</strong></p><h2 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h2><p>打开<code>C:\Windows\System32\drivers\etc</code><br><img src="/images/bug-hexo0001/2.png" alt="hosts"></p><h3 id="获取管理员权限"><a href="#获取管理员权限" class="headerlink" title="获取管理员权限"></a>获取管理员权限</h3><p>右键hosts文件→属性→安全<br>点击编辑→选中Users→完全控制→应用<br><img src="/images/bug-hexo0001/3.png"><br>再打开hosts文件（notepad)</p><h3 id="查询ip地址"><a href="#查询ip地址" class="headerlink" title="查询ip地址"></a>查询ip地址</h3><p>用 <a href="https://www.ipaddress.com/">ipaddress.com</a>查询Github的ip地址<br>或直接使用<code>140.82.113.4 github.com</code><br>再将<code>140.82.113.4 github.com</code>粘贴到文档的下方即可<br><img src="/images/bug-hexo0001/4.png"><br>别忘了保存~</p><h2 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h2><p>回到Git Bash<br><code>hexo clean&amp;hexo g&amp;hexo d</code></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>由于梯子和代理软件的原因导致DNS污染，20端口被屏蔽，需要手动配置github的ip地址进行连接</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ERROR </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> bug </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>翻译打轴制作全流程</title>
+      <link href="/2023/05/08/Youtube-bilibili/"/>
+      <url>/2023/05/08/Youtube-bilibili/</url>
+      
+        <content type="html"><![CDATA[<p>之前在油管上看几个博主的视频觉得挺有意思的，不过纯生肉比较难懂，又在国内找了一圈有没有字幕组，最终一无所获。<span id="more"></span><br>本着不折腾白不折腾的精神，用蹩脚的小学英语水平做些搬运视频，发扬一下互联网共享精神</p><hr><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="具备访问外网的条件"><a href="#具备访问外网的条件" class="headerlink" title="具备访问外网的条件"></a>具备访问外网的条件</h2><p>方法自备</p><h2 id="YouTube视频下载器（插件）"><a href="#YouTube视频下载器（插件）" class="headerlink" title="YouTube视频下载器（插件）"></a>YouTube视频下载器（插件）</h2><p>下载器我使用的是<a href="https://www.internetdownloadmanager.com/"><strong>IDM</strong></a><br>双击安装，一直下一步<br>选择安装路径时默认即可，否则后续操作不便）</p><h2 id="Youtube字幕下载网站"><a href="#Youtube字幕下载网站" class="headerlink" title="Youtube字幕下载网站"></a>Youtube字幕下载网站</h2><p><a href="https://downsub.com/"><strong>DOWNSUB</strong></a></p><h2 id="小学英语水平"><a href="#小学英语水平" class="headerlink" title="小学英语水平"></a>小学英语水平</h2><p>。。。</p><h2 id="字幕制作软件（Arctime-Adobe-Premiere-Pro）"><a href="#字幕制作软件（Arctime-Adobe-Premiere-Pro）" class="headerlink" title="字幕制作软件（Arctime+Adobe Premiere Pro）##"></a>字幕制作软件（Arctime+Adobe Premiere Pro）##</h2><p><a href="https://arctime.org/"><strong>Arctime</strong></a><br><a href="https://www.adobe.com/products/premiere.html"><strong>Adobe Premiere Pro</strong></a>(非必须):<br><a href="https://helpx.adobe.com/cn/media-encoder/using/overview-media-encoder-user-interface.html"><strong>Media Encoder</strong></a>视频压制软件（非必须）</p><hr><h1 id="制作流程"><a href="#制作流程" class="headerlink" title="制作流程"></a>制作流程</h1><h2 id="下载视频源"><a href="#下载视频源" class="headerlink" title="下载视频源"></a>下载视频源</h2><p>首先找到需要搬运的视频<br>此时右上角会出现下载该视频的按钮<br>点击选择清晰度，下载（若无此按钮请确认同意idm作为浏览器插件。浏览器推荐：google、edge、firefox）<br><img src="/images/Youtube-bilibili/2.png"></p><h2 id="下载视频英文字幕"><a href="#下载视频英文字幕" class="headerlink" title="下载视频英文字幕"></a>下载视频英文字幕</h2><p>打开<a href="https://downsub.com/">DOWNSUB</a><br>将下载的视频网页链接导入到搜索框中，搜索<br>选择英语字幕（如果没有，则视频作者未添加字幕，改为下载AUTO-generated——自动翻译）<br><img src="/images/Youtube-bilibili/3.png"><br>下载TXT即可<br>如果你的英语能力像我一样还可以下载下面的中文自动翻译（后期译制时只需根据自动翻译微调）<br><img src="/images/Youtube-bilibili/4.png"></p><h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><p>打开下载的英文txt文件进行翻译<br>将对应的中文输入到对应英文的下一行<br><img src="/images/Youtube-bilibili/5.png"><br>翻译完毕之后，保存</p><h2 id="字幕制作（打轴）"><a href="#字幕制作（打轴）" class="headerlink" title="字幕制作（打轴）"></a>字幕制作（打轴）</h2><h3 id="导入音视频"><a href="#导入音视频" class="headerlink" title="导入音视频"></a>导入音视频</h3><p>打开<strong>arctime</strong>软件<br>导入音视频文件<br><img src="/images/Youtube-bilibili/5.png"></p><h3 id="导入字幕"><a href="#导入字幕" class="headerlink" title="导入字幕"></a>导入字幕</h3><p>导入刚刚编辑的双语txt字幕</p><p><img src="/images/Youtube-bilibili/6.png"></p><p><img src="/images/Youtube-bilibili/7.png"><br>注意选择双数（中文)为第一语言，可点击<strong>预览效果</strong></p><p><img src="/images/Youtube-bilibili/8.png"></p><p>预览无误之后点击确定</p><h3 id="打轴（确定字幕关键帧）"><a href="#打轴（确定字幕关键帧）" class="headerlink" title="打轴（确定字幕关键帧）"></a>打轴（确定字幕关键帧）</h3><p>选择工具栏下方的<strong>快速拖拽工具&#x2F;JK拍打工具</strong></p><p><img src="/images/Youtube-bilibili/9.png"></p><p>将视频时间轴调整到视频的开头</p><p><img src="/images/Youtube-bilibili/10.png"></p><p>调整视频预览窗下方倍速为<strong>0.25X</strong><br>点击时间轴以选中<br>空格播放，在播放视频的同时，跟随视频声音语句，长按键盘上的<strong>J</strong>或<strong>K</strong>键添加字幕</p><p><img src="/images/Youtube-bilibili/11.png"></p><p>直至该字幕对应的视频声音结束后，松开<strong>J</strong>或<strong>K</strong>键<br>如果添加不准确可通过鼠标调整字幕块两侧进行微调</p><p><img src="/images/Youtube-bilibili/12.png"></p><h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p>将所有字幕添加完毕后<br>点击<strong>语言处理</strong>→<strong>将双语字幕切分为双轨道</strong><br><img src="/images/Youtube-bilibili/13.png"></p><p>可以看到字幕从“曲别针”变为双语字幕<br>预览视频无误后<br>点击<strong>导出</strong>→<strong>快速压制视频</strong><br><img src="/images/Youtube-bilibili/14.png"></p><p><strong>CRF</strong>和<strong>PREST</strong>参数自己试着调（留意图中文字描述）<br><img src="/images/Youtube-bilibili/15.png"></p><p>最后选择<strong>开始转码</strong><br>视频制作完成</p><hr><h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p>ps：仅进行视频翻译工作不能称之为“原创”<br>在上传视频时不要勾选自制<br>珍惜他人劳动成果</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字幕组 </tag>
+            
+            <tag> 视频 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>显示技术与游戏</title>
+      <link href="/2023/03/13/monitor&amp;gaming/"/>
+      <url>/2023/03/13/monitor&amp;gaming/</url>
+      
+        <content type="html"><![CDATA[<p>打游戏时，显示器是必不可少的外设，玩家根据显示器输出的画面进行反应，如今技术的飞速发展，使其性能差异会对玩家的游戏体验产生较大影响。本文会简单介绍一些游戏中接触到的显示技术，并且以个人角度给出一“提升建议”。</p><h2 id="关于游戏帧率-fps"><a href="#关于游戏帧率-fps" class="headerlink" title="关于游戏帧率( fps )"></a>关于游戏帧率( fps )</h2><p>帧率——每秒生成的画面数量，图像运动的本质。单位时间内生成的画面越多，画面也就越流畅。很久以前，胶片价格不菲<del>当然现在依然不菲</del>，为了同时满足观赏性和低成本的需求，得出了“每秒拍摄24帧的流畅程度可以欺骗视觉”的结论，这也是很多游戏主机上的游戏，大多能运行30fps及以上的帧率的原因。</p><p>反观游戏，其画面产生的原理，简单讲就是先由CPU负责处理信息，再将画面计算请求传给显卡，显卡绘制完图像后再通过数据线输出到显示器上。不过这里要提一点显卡计算画面是不均匀的，也就是说虽然一秒内可能生成了整整60帧，但是会出现前59帧在前0.1s内生成，最后一帧却用了0.9s才被计算出来的极端情况。留个心眼，后面要讲)</p><p>顺带一提，对于一些硬核在线射击游戏而言（CS、无畏契约、APEX、PUBG、R6、<del>CF</del>），CPU的提升能带来更直观的帧数上涨，尤其大多游戏对CPU多线程的利用不佳，所以CPU单核的睿频就尤为的重要。一定程度上来讲，帧率决定了游戏画面流畅性的上限，而非显示器。</p><h2 id="关于刷新率-hz"><a href="#关于刷新率-hz" class="headerlink" title="关于刷新率( hz )"></a>关于刷新率( hz )</h2><p>随着时代的进步，游戏机和 PC 的游戏帧数早已突破了正常液晶（LCD）显示器的上限，为了承接溢出的性能，高刷显示器应运而生。但所谓的“高刷新率（≥60hz)”并不是近些年才出现，最早的大屁股（CRT）显示器的刷新率就不像现在的液晶显示器是60hz，而是85hz~100hz，这是因为CRT显示器靠电子束射向屏幕荧光粉快速不断的扫描，不像LCD一直发光的背光板。因为没有稳定持续的背光源，低刷新率会导致频闪，高刷新率是非常必要的。</p><p><img src="/images/monitor&gaming/CRT_principle_left.png" alt="CRT 侧面"></p><p><img src="/images/monitor&gaming/CRT_principle_front.png" alt="CRT 正面"></p><h3 id="延迟"><a href="#延迟" class="headerlink" title="延迟"></a>延迟</h3><p>所以不同档次的刷新率到底对游戏画面会产生什么样的影响？看看下面这张图吧！</p><p><img src="/images/monitor&gaming/FPS&Latency.png" alt="刷新率对延迟的影响"></p><p>由图可见刷新率越高，同一时间点人物模型越接近对手的实际位置，越能更快的发现的对手。刷新率的大小决定游戏画面的改变频率，计算一下，如果60hz是 1&#x2F;60s≈0.017s 刷新一次，而144hz则是 1&#x2F;144s≈0.007s，240hz更是只有 1&#x2F;240s≈0.004s ,立竿见影。越高的刷新率拥有更低的刷新延迟，更快的发现对手。流畅的画面可以在射击游戏中对拽光弹的位置进行观测预判，做到更精准的压枪和定位。</p><p><img src="/images/monitor&gaming/monitor_refresh_rate.png" alt="UFO测试 "></p><p>不过从图中也能看出，刷新率越高带来的低延迟增益愈不明显，基本相同的刷新率增长梯度下，由60hz到144hz是0.01s的差别，而 144hz 到 240hz 却只提升了0.003s 。总结一下，低刷新区间的刷新率改变带来的延迟变化是显著的，而延迟变化显著程度随刷新率整体的提升变得越来越弱，也就是说60hz转144hz屏幕的提升优于144hz到240hz的转变。已经在用144hz的是否再升级240hz甚至360hz，最重要的是根据钱包进行考量和选择 ：P</p><h3 id="拖影"><a href="#拖影" class="headerlink" title="拖影"></a>拖影</h3><p>说完了刷新率对延迟的影响，再谈谈和刷新率变化密切相关的另一个因素——拖影。</p><p><img src="/images/monitor&gaming/tuoying.png" alt="拖影"></p><h4 id="余晖效应"><a href="#余晖效应" class="headerlink" title="余晖效应"></a>余晖效应</h4><p>由于人眼的余晖效应（视觉暂留现象），拖影是一种生活中常见的现象，可以简单理解为视网膜的图像不会完全在人脑消失，而是驻留一定时间才会消失，且移动速度越快的物体拖影越明显。显示器虽然跟人眼的拖影不完全一样，但都是由于不能足够快（快到人眼无法察觉）的响应 “画面需要消失的部分” 和 “画面需要显示的部分” 从而产生拖影，所以提高刷新率能解决一部分问题、</p><h4 id="响应时间"><a href="#响应时间" class="headerlink" title="响应时间"></a>响应时间</h4><p>但仅仅提高刷新率还不够，这就要引出另外一个参数指标——响应时间。显示器的响应时间是决定画面“干净”的重要因素，由于液晶显示器（LCD，包括IPS、VA、TN面板）由背光层（白光常亮背光）和液晶层（改变背光颜色）组成。而液晶层因为需要根据显卡的指令，不断改变每个像素点的颜色。就像在背光层和眼睛之间放一个三棱镜，将光分散，然后控制角度发出想要的颜色。而这种切换颜色的速度也会有快慢之分，面板好的的显示器响应时间就会短一些，但要注意有些显示器厂商会在宣传页标注1ms的响应时间，但这往往是通过OD加压在极限情况下取得的数据，此时显示器画面已经完全过冲，残影会非常严重。</p><p>不同类型的液晶显示器（LCD）面板有着不同的平均响应时间，泛泛的说一下三种显示器面板类型的特点</p><p>IPS：现在最主流的显示器面板，可视角度好，无论站哪里亮度和色彩都差不多，响应时间较慢，价格较贵</p><p>VA：曲面显示器和廉价显示器中常用，柔性强，可视角度差，响应时间最慢（视具体情况而定，有特殊情况比如华兴快速VA）</p><p>TN：最快的响应时间，便宜</p><p>综上所述TN面板最快，其次是IPS，最后是VA。注意！如果你自认为是”究极射击游戏发烧友”或者拥有不止一个显示器，那么TN是十分适合的（可就算这样我也觉得瞎眼而选择IPS）,如果你还在判断自己是否属于“射击游戏发烧友”，那你绝对不是！也绝对不需要TN屏！因为一些稍高档的IPS屏就能追的上TN的高度，不必忍受TN屏那一点点游戏增益带来的负面效果！</p><h4 id="趋势"><a href="#趋势" class="headerlink" title="趋势"></a>趋势</h4><p>上面说的三种面板都是LCD，不过随着技术的发展，OLED 、AMOLED（类OLED）、MINILED、甚至MICROLED（目前显示面板最优解）也都逐渐成为主流。尤比较特殊的是， OLED具有单像素点发光的性质，因其自身没有像 LCD 的背光层，转换像素颜色的速度极快，甚至能做到连TN屏幕也很难做到的1ms响应时间。</p><p>因为OLED是“有机”，而有机的最大缺点就是不稳定，易损耗。所以OLED长期使用会出现偏色的情况，如果长期激发某一区域保持高亮度显示，就会造成这个区域的亮度与其它区域不同造成色差，俗称“烧屏”。除了烧屏，还有一个缺点是部分OLED使用的是PWM调光技术而非DC调光。因为OLED是像素自发光提供亮度，所以就算1920×1080分辨率的普通屏幕，也有2073600个像素点！这使得控制亮度均匀变得十分困难，PWM调光便是靠亮灭达到对屏幕亮度的控制。高亮度的时候，亮屏的时间比较久，屏幕点亮时间越长，亮度就越高。 为了降低亮度，则需要加入灭屏时间，为了持续降低亮度，灭屏的时间越来越多。</p><p>反观LCD因为只有一块纯白背光板就好控制多了，所以也就有相当一部分LCD使用的DC调光而非PWM调光，DC调光是靠改变电路功率大小实现的。简而言之就是不闪，而PWM则是高亮度不闪，低亮度闪，也就导致了部分人会产生眼睛不舒服的情况。那有人可能要问了，为什么OLED不能使用DC调光技术？因为OLED的RGB像素点对电压大小的反应不同，也就是说同样的电压并不能使屏幕上的所有像素点保持同样的颜色和亮度。不过MICROLED就没有这个问题，因为MICROLED是类似一个分区无数多的MiniLED屏幕，屏幕有几个像素点他就有几个分区，集两家之长，两个字： <strong>无敌</strong>。</p><h3 id="画面撕裂-游戏帧率高于显示器刷新率有必要吗"><a href="#画面撕裂-游戏帧率高于显示器刷新率有必要吗" class="headerlink" title="画面撕裂&amp;游戏帧率高于显示器刷新率有必要吗?"></a>画面撕裂&amp;游戏帧率高于显示器刷新率有必要吗?</h3><p><img src="/images/monitor&gaming/Si_lie.png" alt="画面撕裂"></p><p>玩游戏时大幅镜头晃动导致画面被切断，是因为当游戏帧数超过屏幕刷新率时（例如屏幕 60hz ，帧数却300fps+），显示器来不及显示显卡给的前一张画面就被催着显示下一张。想象一下300多帧被强塞进只有60hz的显示器，显示器每次刷新还都要选取显卡最新的画面，因为逐行扫描的缘故，画面需要在显示器上一条一条的刷新。自然还没等上一张显示完，后面的画面就插进来了，覆盖了前面的画面。</p><p>还记得开头讲帧率时提到的那个极端情况吗？“ 59帧在前0.1s内生成，而最后一帧却用了0.9s才被计算出来”。正是反驳了“大于刷新率的帧数都会浪费”这个观点。</p><p>因为帧率生成并不稳定，导致前面的59帧被挤到0.017s内显示，而最后一帧却要承担0.073s的屏幕刷新请求，所以不锁帧的情况下用60hz玩60fps上下的游戏会出现卡顿。而如果帧数远远大于显示器刷新率的限制，显示器才能有足够多的画面选择权，减少卡顿。</p><p>也正因为后来的画面抢着覆盖前面的画面，才能在60hz内每“1hz”都看到新鲜的画面，变相降低了延迟，所以帧数大于显示器无用论是错误的。</p><p>如果以游戏画质为主的玩家可以尝试锁帧或者垂直同步(等待画面缓冲完毕再显示下一张，使帧率控制在显示器的最大刷新率内)，这样做还有一个好处就是可以是游戏帧数更稳定，比如一个未锁帧的电脑，一直用极限性能去计算画面，起初还能猖狂一会儿，可越到后面温度越高，直到碰到温度墙限制。为了降温，芯片不得不降低算力减少发热量，游戏帧数也就随之大幅下降，造成不稳定的游戏体验。但如果以竞技为主其它什么都不考虑的话还得乖乖关闭锁帧，或者锁在一个比较平均的帧数（CS控制台：’fps_max 200’），否则会有严重的操作延迟等着你：P</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>回答开头问题，游戏帧率和屏幕刷新率真的会影响游戏的操作吗，答案是肯定的，更高的刷新率的确可以更快的发现敌人，更好的根据画面变化操控鼠标。不过当然真正好玩的游戏是不会受帧率或者刷新率局限的: )</p><p>屏幕刷新率和游戏帧率之间个人认为显示器刷新率更重要，不过也有例外，如果是重度3A玩家当然还是以提升游戏帧率为主，因为大多数高画质设置的3A游戏还是只能以“主机帧率运行”。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搭建onedrive公共云盘</title>
+      <link href="/2022/12/24/onedrive-notice/"/>
+      <url>/2022/12/24/onedrive-notice/</url>
+      
+        <content type="html"><![CDATA[<p>域名: <del>onedrive.knyxz.xyz</del>（已失效）<br>在冲浪的时候发现浅笑安然的<a href="https://sianx.com/">博客</a><br><br><img src="/images/onedrive_notice/001.png" alt="浅笑安然のonedrive云盘"><br>其博客中工具菜单中的的我的云盘，能直接访问onedrive云盘并且下载文件</p><p>只需在onedrive存储空间中指定一个公共文件夹</p><p>再用<a href="https://github.com/spencerwooo/onedrive-vercel-index">Onedrive-vercel-index</a>Fork一下，根据官方文档用vercel进行部署就完成了<br><img src="/images/onedrive_notice/002.png" alt="github project"></p><p>ps：vercel这个网站还蛮良心的，hexo加速和域名解析都是在这个上面搞的，真不戳：）</p><p><img src="/images/onedrive_notice/003.png" alt="vercel"><br>最后放个成果图↓</p><p><img src="/images/onedrive_notice/004.png" alt="建好的公共云盘"></p><hr><p>由于网盘使用的数据库为upstash，不活跃的数据库将会被自动清除</p><p>周期性手动部署过于麻烦，故已停止使用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 云盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
