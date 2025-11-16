@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>200元极限静音影音主机</title>
+      <link href="/2025/10/10/25-10-30/"/>
+      <url>/2025/10/10/25-10-30/</url>
+      
+        <content type="html"><![CDATA[<p>前几天搬家，家人观影需求，且希望主机静音。因为“计算机专业的肯定会装电脑”，便攒了一台足够满足需求的静音主机</p><h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><p>首先，配件搭配主要受限于两个条件，一个是噪音，其次就是功耗，想要在满足这两个条件下搭配一台性能足够解码4k视频的主机，我只能将目光放在i3-4代或者i5-2代这种性能的CPU上。对比之后选择了i3-4330TE，35TDP，HD4600的核显，虽然主频不高功耗稍高但也是为数不多的选择了。</p><h2 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h2><p>由于显示器没有VGA口，所以主板必须带有HDMI口，而且由于捡垃圾所以也不需要超频，直接挑一块最低端的二线板就行。</p><h2 id="散热器"><a href="#散热器" class="headerlink" title="散热器"></a>散热器</h2><p>由于要求绝对“0”噪音，必须是被动散热，咸鱼上丹麦王国一坨铝片又太贵不值当，索性直接PDD买最便宜的风冷散热，只要挑的时候选择一些鳍片间隙较大的方便空气流动就行。</p><h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>两根8g ddr3，一根新买的一根原来拆下来的</p><h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>主板没有M.2，为顾及系统响应速度选择 SATA 固态 120g，装系统再连NAS。</p><h2 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h2><p>重头戏，电源想要静音除了花重金买高端电源，否则只能走点歪路子，比如用DC适配器接一个DC-ATX的电源转换模块，这样虽然功率限制大，但是应付TE的U还是绰绰有余的。</p><h2 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a>机箱</h2><p>PDD30元包邮，没什么大毛病，挺好一机箱，只是稍微大点的版就容不下了，空间利用设计的还是有点欠缺</p><h2 id="装机"><a href="#装机" class="headerlink" title="装机"></a>装机</h2><p>过程很简单省略不记，不过装散热器的时候我还是把风扇接上了，不过没接线，以防万一压不住还能开风扇冷静冷静想想解决办法。</p><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>系统是2021LTSC，因为需求对系统环境依赖很低，只要能正常打开浏览器+播放器就行，老坛酸菜足矣。</p><h2 id="表现"><a href="#表现" class="headerlink" title="表现"></a>表现</h2><p>开机后功耗在30w左右，能接受，此外，除了微弱的电流声，整机完全0噪音，同时能完美保证影音需求。</p><h2 id="花费"><a href="#花费" class="headerlink" title="花费"></a>花费</h2><p>CPU 20<br>主板 54<br>RAM 30<br>散热 10<br>ROM 36<br>电源 55+29<br>机箱 30<br>共计：264</p><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>这套配置还有很大优化空间，比如内存、固态、机箱都可以从咸鱼上淘，能压个30块钱，主要是最近内存存储统统涨价了，不然还能更低。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 折腾 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 装机 垃圾佬 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于hexo部署 &quot;Please make sure you have the correct access rights&quot; 报错及解决</title>
       <link href="/2023/07/08/bug-hexo0001/"/>
       <url>/2023/07/08/bug-hexo0001/</url>
